@@ -2,4 +2,4 @@
 
 ## Canadian Flag
 
-&lt;iframe width="640" height="360" frameborder="0" src="https://www.shadertoy.com/embed/WfSczh?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+[![Canadian Flag](https://www.shadertoy.com/media/shaders/WfSczh.jpg)](https://www.shadertoy.com/view/WfSczh)
