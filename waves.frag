@@ -12,11 +12,6 @@ const float TAU = 2. * PI;
 
 // Auxiliary Functions --------------------------------------------------------
 
-// Takes x-axis normalized device coordinates(0, 1) and converts to aspect ratio corrected coordinates
-float X(float x) {
-    float correction = u_resolution.y / u_resolution.x;
-    return x * correction;
-}
 
 // Wave Functions -------------------------------------------------------------
 float wave(vec2 uv) {
@@ -37,11 +32,8 @@ float plot(vec2 uv, float line) {
 }
 
 void main() {
-    // Aspect ratio corrected UV coordinates
-    vec2 uv = gl_FragCoord.xy / u_resolution.xy;
-
-    // Remap to (-1, 1)
-    uv = uv * 2 - 1;
+    // Aspect ratio corrected UV coordinates (-1, 1)
+    vec2 uv =  (2.0 * gl_FragCoord.xy - u_resolution.xy) / u_resolution.y;
 
     vec3 line_colour = vec3(0.0, 0.5, 0.0);
 

@@ -20,6 +20,9 @@ const vec3 canadian_white = vec3(0.867);
 float X(float x) {
     // This is actually supposed to be the other way around, but let's leave it this way
     // Because the shader is designed with this error :')
+    // Further correction. I did not fully understand that (0, 1) cannot be the same
+    // In both directions, as the screen is not square.
+    // TODO: More explanation
     float correction = u_resolution.x / u_resolution.y;
     return x * correction;
 }
