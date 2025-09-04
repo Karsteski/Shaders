@@ -18,6 +18,8 @@ const vec3 canadian_white = vec3(0.867);
 
 // Takes x-axis normalized device coordinates(0, 1) and converts to aspect ratio corrected coordinates
 float X(float x) {
+    // This is actually supposed to be the other way around, but let's leave it this way
+    // Because the shader is designed with this error :')
     float correction = u_resolution.x / u_resolution.y;
     return x * correction;
 }
